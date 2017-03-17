@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="us.cyrien.hacbot.GUI.jfx.Controller">
+    <center>
+        <TextArea fx:id="consoleArea" editable="false" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #404040;" styleClass="content" stylesheets="@CSS/textArea.css" wrapText="true" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </TextArea>
+    </center>
+    <bottom>
+        <VBox alignment="TOP_RIGHT" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="TOP_RIGHT" spacing="10.0">
+                    <children>
+                        <TextField editable="false" prefHeight="39.0" prefWidth="42.0" promptText=" &gt;" stylesheets="@CSS/inputField.css">
+                            <HBox.margin>
+                                <Insets left="1.0" right="-15.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="inputField" onAction="#onInput" prefHeight="39.0" prefWidth="299.0" stylesheets="@CSS/inputField.css" HBox.hgrow="ALWAYS">
+                            <HBox.margin>
+                                <Insets left="-5.0" right="-5.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <Button id="runButton" mnemonicParsing="false" onAction="#startHAC" text="Run">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button id="stopButton" mnemonicParsing="false" onAction="#stopHAC" text="Stop">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                        <MenuButton mnemonicParsing="false" text="Commands">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#newSession" text="New Session" />
+                            </items>
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin>
+                        </MenuButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="4.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+   <top>
+      <VBox alignment="TOP_RIGHT" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER" />
+   </top>
+</BorderPane>

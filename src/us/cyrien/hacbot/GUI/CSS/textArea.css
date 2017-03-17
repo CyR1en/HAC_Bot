@@ -1,0 +1,12 @@
+.text-area {
+    -fx-font-family: monospace;
+    -fx-font-style: normal;
+    -fx-font-size: 13;
+    -fx-text-fill: turquoise;
+    -fx-display-caret:true;
+}
+
+.text-area .content {
+    -fx-background-color: #2e313c;
+    -fx-border-color: #797979;
+}

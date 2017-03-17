@@ -1,0 +1,9 @@
+.text-input {
+    -fx-font-family: "Lucida Console", Monaco, monospace;
+    -fx-font-size: 14;
+    -fx-text-fill: whitesmoke;
+    -fx-background-color: #2e313c;
+    -fx-display-caret:true;
+    -fx-background-insets: 0, 1;
+    -fx-background-radius: 3, 2;
+}
