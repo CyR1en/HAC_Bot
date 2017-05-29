@@ -1,3 +1,3 @@
 # HAC_Bot
 
-## Clever bot for Discord
+### Clever bot for Discord
